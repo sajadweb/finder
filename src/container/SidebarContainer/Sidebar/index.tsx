@@ -4,16 +4,12 @@ import { NavigationActions } from "react-navigation";
 
 const routes = [
 	{
-		route: "Home",
-		caption: "Home",
+		route: "Menu",
+		caption: "Menu",
 	},
 	{
 		route: "About",
 		caption: "About",
-	},
-	{
-		route: "BlankPage",
-		caption: "Blank Page",
 	},
 	{
 		route: "Login",
