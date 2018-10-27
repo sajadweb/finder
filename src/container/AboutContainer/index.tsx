@@ -1,5 +1,5 @@
 import * as React from "react";
-import AboutPage from "../../stories/screens/AboutPage";
+import AboutPage from "./AboutPage";
 export interface Props {
 	navigation: any;
 }

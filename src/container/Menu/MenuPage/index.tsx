@@ -1,5 +1,6 @@
 import * as React from "react";
-import { Container, Header, Title, Content, Text, Button, Icon, Left, Right, Body } from "native-base";
+import { Container, Content, Text, Button } from "native-base";
+import { Header, Card } from "./../../../components";
 
 import styles from "./styles";
 export interface Props {
@@ -10,24 +11,16 @@ export interface Props {
 export interface State { }
 class MenuPage extends React.Component<Props, State> {
 	render() {
-		const { theme } = this.props;
 		return (
 			<Container style={styles.container}>
-				<Header  style={{ backgroundColor: "read" }}>
-					<Left>
-						<Button transparent onPress={() => this.props.navigation.goBack()}>
-							<Icon name="ios-arrow-back" />
-						</Button>
-					</Left>
-
-					<Body style={{ flex: 3 }}>
-						<Title>{theme + "Blank Page"}</Title>
-					</Body>
-
-					<Right />
-				</Header>
+				<Header
+					title="تتمه"
+					theme={"primary"}
+					navigation={this.props.navigation}
+				/>
 
 				<Content padder>
+					<Card title="حساب شخصی" />
 					<Button transparent onPress={() => this.props.addTheme("Read")}>
 						<Text>Change theme Read</Text>
 					</Button>

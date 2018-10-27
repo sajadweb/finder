@@ -11,14 +11,16 @@ export interface Props {
 export interface State { }
 class MenuContainer extends React.Component<Props, State> {
 	render() {
-		return <MenuPage navigation={this.props.navigation} addTheme={(theme: string) => {
-			return this.props.addTheme(theme);
-		}} theme={this.props.theme} />;
+		return (<MenuPage
+			navigation={this.props.navigation}
+			addTheme={(theme: string) => {
+				return this.props.addTheme(theme);
+			}}
+			theme={this.props.theme}
+		/>);
 	}
 }
 const mapStateToProps = state => {
-	// tslint:disable-next-line:no-debugger
-	debugger;
 	return {
 		theme: state.themeReducer.theme,
 	};
