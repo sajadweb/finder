@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Header, Left, Right, Button, Icon, Title } from "native-base";
 import styles from "./header.style";
-import { BaseTheme } from "../../theme/color";
+import { BaseTheme } from "../../../theme/color";
 
 export interface Props {
     navigation: any;

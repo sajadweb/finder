@@ -1,12 +1,11 @@
 import * as React from "react";
-import { Container, Content, Text, Button } from "native-base";
-import { Header, Card } from "./../../../components";
+import { Container, Content, Text } from "native-base";
+import { Header, CardFull as Card } from "./../../components";
 
 import styles from "./styles";
 export interface Props {
 	navigation: any;
-	addTheme: Function;
-	theme: string;
+	theme: any;
 }
 export interface State { }
 class MenuPage extends React.Component<Props, State> {
@@ -19,11 +18,9 @@ class MenuPage extends React.Component<Props, State> {
 					navigation={this.props.navigation}
 				/>
 
-				<Content padder>
-					<Card title="حساب شخصی" />
-					<Button transparent onPress={() => this.props.addTheme("Read")}>
-						<Text>Change theme Read</Text>
-					</Button>
+				<Content>
+					<Card theme={this.props.theme} title="حساب شخصی" />
+					<Text>Change theme Read {this.props.theme}</Text>
 				</Content>
 			</Container>
 		);
