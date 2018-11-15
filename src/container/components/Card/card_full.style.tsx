@@ -10,9 +10,8 @@ export default (theme: BaseTheme) => (StyleSheet.create<any>({
         height: height,
     },
     card_content: {
-        marginTop: -((height / 3) * 2),
+        marginTop: -(height / 3) * 2,
         zIndex: 1,
-        bottom: "10%",
         marginLeft: "5%",
         marginRight: "5%",
         width: "90%",
