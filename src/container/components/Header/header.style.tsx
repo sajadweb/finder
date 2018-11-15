@@ -1,5 +1,4 @@
-import getColor from "../../theme/color";
-import { BaseTheme } from "../../theme/color";
+import getColor, { BaseTheme } from "../../../theme/color";
 
 export default (theme: BaseTheme) => ({
     "Header": {

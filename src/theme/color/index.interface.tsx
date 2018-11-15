@@ -13,6 +13,16 @@ export interface ColorTheme {
     disabledLight: string;
     border: string;
     float: string;
+    size: {
+        xxSmall: number;
+        xSmall: number;
+        small: number;
+        mid: number;
+        large: number;
+        xLarge: number;
+        xxLarge: number;
+    };
+    unit: number;
 }
 export interface ITheme {
     primary: ColorTheme;

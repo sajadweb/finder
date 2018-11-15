@@ -8,6 +8,7 @@ const deviceWidth = Dimensions.get("window").width;
 import Menu from "./container/Menu";
 
 import Login from "./container/LoginContainer";
+import Card from "./container/CardContainer";
 
 import AboutPage from "./container/AboutContainer";
 import Sidebar from "./container/SidebarContainer";
@@ -30,6 +31,7 @@ const Drawer = DrawerNavigator(
 const App = StackNavigator(
 	{
 		Login: { screen: Login },
+		Card: { screen: Card },
 		Drawer: { screen: Drawer },
 	},
 	{
