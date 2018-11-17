@@ -1,6 +1,6 @@
 import * as React from "react";
 import { CardItem, View, Button } from "native-base";
-import { Text, Center, Icon, Sliding, Grid, Row, Col } from "../../../components";
+import { Text, Center, Icon, Sliding, Grid, Row, Col, BankLogo } from "../../../components";
 import styles from "./card_menu.style";
 import { BaseTheme } from "../../../../theme/color";
 
@@ -31,6 +31,7 @@ export default class App extends React.PureComponent<Props, State> {
                                     </Button>
                                 </Row>
                                 <Col style={{ flexDirection: "row-reverse" }}>
+                                    <BankLogo square name="mile" />
                                     <Text size="large" color="success">بانک ملی</Text>
                                 </Col>
                             </Row>

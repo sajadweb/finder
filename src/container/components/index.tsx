@@ -6,4 +6,5 @@ export * from "./Icon";
 export * from "./Animation";
 export * from "./Modal";
 export * from "./Fab";
+export * from "./Logo";
 export { Grid, Col, Row } from "native-base";
