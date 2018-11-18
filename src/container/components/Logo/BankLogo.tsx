@@ -5,6 +5,7 @@ import { ImageStyle } from "react-native";
 
 export interface Props {
     name?: IBank;
+    cart_number?: number;
     style?: ImageStyle;
     /**
      * Dimension of thumbnail.
@@ -22,6 +23,12 @@ export interface Props {
      */
     square?: boolean;
 }
-export default function ({ name, style, ...props }: Props) {
-    return (<Thumbnail style={[style, { width: 40, height: 40 }]} size={12} source={bank(name)} {...props} />);
+export default function ({ name, cart_number, style, ...props }: Props) {
+    let logo = {};
+    if (name) {
+        logo = bank(name).logo;
+    } else if (cart_number) {
+        logo = bank(cart_number).logo;
+    }
+    return (<Thumbnail style={[style, { width: 40, height: 40 }]} size={12} source={logo} {...props} />);
 }

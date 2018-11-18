@@ -2,6 +2,7 @@ import * as React from "react";
 import {
   Container,
   Content,
+  Spinner,
 } from "native-base";
 
 import styles from "./styles";
@@ -16,6 +17,8 @@ import CardMenu from "./component/CardMenu";
 export interface Props {
   navigation: any;
   theme: BaseTheme;
+  cards?: Array<any>;
+  loading?: boolean;
 }
 export interface State { }
 class CardPage extends React.Component<Props, State> {
@@ -25,11 +28,10 @@ class CardPage extends React.Component<Props, State> {
         <BackHeader theme={this.props.theme} title={"عملیات کارت"} navigation={this.props.navigation} />
         <Content style={styles.content}>
           <CardFull theme={this.props.theme}  >
-            <CardMenu theme={this.props.theme} title="حساب شخصی" />
-            <CardMenu theme={this.props.theme} title="حساب شخصی" />
-            <CardMenu theme={this.props.theme} title="حساب شخصی" />
-            <CardMenu theme={this.props.theme} title="حساب شخصی" />
-            <CardMenu theme={this.props.theme} title="حساب شخصی" />
+            {this.props.loading === false || <Spinner />}
+            {this.props.cards.map((item, index) => (
+              <CardMenu cart_number={item.card_number} key={index} theme={this.props.theme} title="حساب شخصی" />
+            ))}
           </CardFull>
 
         </Content>
