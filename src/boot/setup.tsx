@@ -16,7 +16,7 @@ export default class Setup extends React.Component<Props, State> {
     super(props);
     this.state = {
       isLoading: false,
-      store: configureStore(() => this.setState({ isLoading: false }))
+      store: configureStore(() => this.setState({ isLoading: false })),
     };
   }
 
