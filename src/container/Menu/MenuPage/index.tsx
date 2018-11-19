@@ -4,6 +4,7 @@ import { Header, CardFull as Card, ButtonIcon, Grid, Row, Col, Sliding } from ".
 import CardMenu from "./component/CardMenu";
 
 import styles from "./styles";
+import lang from "../../../boot/lang";
 export interface Props {
 	navigation: any;
 	theme: any;
@@ -17,7 +18,7 @@ class MenuPage extends React.Component<Props, State> {
 		return (
 			<Container style={styles.container}>
 				<Header
-					title="تتمه"
+					title={lang("greeting")}
 					theme={"primary"}
 					navigation={this.props.navigation}
 				/>
