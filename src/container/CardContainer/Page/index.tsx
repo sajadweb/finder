@@ -13,6 +13,7 @@ import {
 } from "../../components";
 import { BaseTheme } from "../../../theme/color";
 import CardMenu from "./component/CardMenu";
+import lang from "../../../boot/lang";
 
 export interface Props {
   navigation: any;
@@ -25,7 +26,7 @@ class CardPage extends React.Component<Props, State> {
   render() {
     return (
       <Container style={styles.container}>
-        <BackHeader theme={this.props.theme} title={"عملیات کارت"} navigation={this.props.navigation} />
+        <BackHeader theme={this.props.theme} title={lang("card.title")} navigation={this.props.navigation} />
         <Content style={styles.content}>
           <CardFull theme={this.props.theme}  >
             {this.props.loading === false || <Spinner />}

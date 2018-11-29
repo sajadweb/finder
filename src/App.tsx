@@ -15,6 +15,7 @@ import Sidebar from "./container/SidebarContainer";
 
 import getTheme from "./theme/components";
 import myTheme from "./theme/variables/blueGreyTheme";
+import lang from "./boot/lang";
 
 const Drawer = DrawerNavigator(
 	{
@@ -24,7 +25,7 @@ const Drawer = DrawerNavigator(
 	{
 		initialRouteName: "Menu",
 		drawerWidth: deviceWidth - 50,
-		drawerPosition: "right",
+		drawerPosition: lang("dir"),
 		contentComponent: (props: any) => <Sidebar {...props} />,
 	},
 );

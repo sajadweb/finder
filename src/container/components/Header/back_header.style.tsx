@@ -1,5 +1,6 @@
 import getColor, { BaseTheme } from "../../../theme/color";
 import { StyleSheet, ViewStyle } from "react-native";
+import lang from "../../../boot/lang";
 
 export default (theme: BaseTheme) => ({
     Header: {
@@ -7,12 +8,12 @@ export default (theme: BaseTheme) => ({
     },
     row: StyleSheet.create<{ style: ViewStyle }>({
         style: {
-            flexDirection: "row-reverse",
+            flexDirection: lang("flexDirection"),
         },
     }).style,
     right: StyleSheet.create<{ style: ViewStyle }>({
         style: {
-            flexDirection: "row-reverse",
+            flexDirection: lang("flexDirection"),
             backgroundColor: "transparent",
             justifyContent: "flex-start",
             alignItems: "flex-end",

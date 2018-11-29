@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Header, Left, Right, Button, Icon, Title } from "native-base";
+import { Header, Title, Left, Button, Icon, Body, Right } from "native-base";
 import styles from "./header.style";
 import { BaseTheme } from "../../../theme/color";
 
@@ -12,20 +12,20 @@ export interface State { }
 export default class App extends React.Component<Props, State> {
     render() {
         const { theme } = this.props;
+        const style = styles(theme || "primary");
         return (
-            <Header androidStatusBarColor={styles(theme || "primary").color.primaryDark} style={styles(theme || "primary").Header}>
-                <Left>
-                    <Button transparent onPress={() => this.props.navigation.goBack()}>
-                        <Icon  name="ios-add" />
+            <Header androidStatusBarColor={style.color.primaryDark} style={style.Header}>
+                <Left style={style.row}>
+                    <Button transparent onPress={() => this.props.navigation.navigate("DrawerOpen")}>
+                        <Icon name="menu" />
                     </Button>
                 </Left>
-                <Right>
+                <Body style={style.row}>
                     <Title>{this.props.title}</Title>
-                    <Button transparent onPress={() => this.props.navigation.navigate("DrawerOpen")}>
-                        <Icon
-                            active
-                            name="menu"
-                        />
+                </Body>
+                <Right style={style.row}>
+                    <Button transparent>
+                        <Icon name="ios-add" />
                     </Button>
                 </Right>
             </Header>

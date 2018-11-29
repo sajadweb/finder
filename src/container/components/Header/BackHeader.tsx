@@ -3,6 +3,7 @@ import { Header, Button, Title, Grid, Row } from "native-base";
 import { Icon } from "..";
 import styles from "./back_header.style";
 import { BaseTheme } from "../../../theme/color";
+import lang from "../../../boot/lang";
 
 export interface Props {
     navigation: any;
@@ -24,7 +25,7 @@ export default class App extends React.Component<Props, State> {
                                 color="white"
                                 type="MaterialIcons"
                                 active
-                                name="arrow-forward"
+                                name={lang("icon.back")}
                             />
                         </Button>
                         <Title style={{ top: -15 }}>{this.props.title}</Title>

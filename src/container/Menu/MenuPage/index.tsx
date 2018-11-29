@@ -18,7 +18,7 @@ class MenuPage extends React.Component<Props, State> {
 		return (
 			<Container style={styles.container}>
 				<Header
-					title={lang("greeting")}
+					title={lang("menu.title")}
 					theme={"primary"}
 					navigation={this.props.navigation}
 				/>
